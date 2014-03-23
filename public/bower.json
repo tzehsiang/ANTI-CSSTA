@@ -1,0 +1,14 @@
+{
+  "name": "ats",
+  "version": "1.0.0",
+  "main": "path/to/main.css",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.10.0",
+    "jquery": "~2.1.0"
+  },
+  "devDependencies": {}
+}

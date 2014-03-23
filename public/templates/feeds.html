@@ -1,0 +1,10 @@
+<section class="feed" id="sunflower-story">
+  <h2>{{topic}}</h2>
+  <ul class="tag-list">
+    <li ng-repeat="tag in tags">{{tag}}</li>
+    <div class="clear"></div>
+  </ul>
+  <ul class="feed-list">
+    <feed ng-repeat="feed in feeds" feed-data="feed"></feed>
+  </ul>
+</section>
