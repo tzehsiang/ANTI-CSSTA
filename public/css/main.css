@@ -113,6 +113,9 @@ a:hover {
   -o-box-shadow: 0 1px 0 rgba(0,0,0,.1);
   box-shadow: 0 1px 0 rgba(0,0,0,.1);
 }
+#hero-header > .showcase {
+  
+}
 #hero-logo {
   background: url(../images/logo_sunflower.png) center top no-repeat;
 }
