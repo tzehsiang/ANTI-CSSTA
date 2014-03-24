@@ -72,6 +72,13 @@ a:hover {
   width: 1110px;
   margin: 0 auto;
 }
+.text-showcase {
+  width: 700px;
+  margin: 0 auto;
+}
+.text-showcase > p {
+  margin-bottom: 20px;
+}
 .clear {
   clear: both;
 }
