@@ -1,4 +1,4 @@
-<li class="feed-item">
+<li class="feed-item {{getTypeClass()}}">
   <a class="feed-text" href="https://twitter.com/{{feed.user.screen_name}}/status/{{feed.id_str}}"><p class="content">{{feed.text}}</p><a>
   <div ng-show="feed.entities.media" class="feed-media">
     <a ng-repeat="url in feed.entities.urls" href="{{url.expanded_url}}">{{url.expanded_url}}</a>

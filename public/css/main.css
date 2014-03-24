@@ -71,6 +71,7 @@ a:hover {
 .showcase {
   width: 1110px;
   margin: 0 auto;
+  padding-left: 40px;
 }
 .clear {
   clear: both;
@@ -140,7 +141,7 @@ a:hover {
 .feed {
   width: 330px;
   float: left;
-  margin: 0 20px;
+  margin: 0 40px 0 0;
 }
 
 .feed-tag {
@@ -210,11 +211,14 @@ a:hover {
 }
 .feed-list > .feed-item.alt {
   background: #FBB040;
-  color: #FFFFFF;
   border: none;
 }
-.feed-list > .feed-item.alt > .content {
+.feed-list > .feed-item.alt .content {
   font-weight: bold;
+  color: #FFFFFF;
+}
+.feed-list > .feed-item.alt .content:hover {
+  color: rgba(255,255,255, 0.8);
 }
 .feed-list > .feed-item.alt > footer > .provider-detail > .info > a {
   color: rgba(0,0,0,.66);

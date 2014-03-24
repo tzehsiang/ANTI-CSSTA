@@ -19,7 +19,8 @@ angular.module('components', [])
       scope: {
         keywords: '@',
         source: '@',
-        topic: '@'
+        topic: '@',
+        type: '@'
       },
       controller: function($scope, $element, $http, $interval) {
         updateFeeds($scope, $http);
@@ -31,6 +32,14 @@ angular.module('components', [])
         
         $scope.encodedTag = function(tag) {
           return encodeURIComponent(tag);
+        };
+
+        $scope.getTypeClass = function() {
+          if($scope.type === 'announce') {
+            return 'alt';
+          } else {
+            return '';
+          }
         };
       },
       templateUrl: 'templates/feeds.html',
@@ -46,7 +55,6 @@ angular.module('components', [])
       link: function(scope, element, attrs, feedsCtrl) {
         //remove urls
         scope.feed.text = scope.feed.text.replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/g, '');
-
         // scope.getTextWithHashTags = function() {
         //   //add tags
         //   var re = new XRegExp('#(\\p{L})+', 'g');
