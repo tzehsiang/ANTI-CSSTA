@@ -25,20 +25,28 @@
     <div id="hero-content">
       <div class="showcase">
         <section class="feed" id="sunflower-info">
-          <h2>重要消息</h2>
+          <h2>相關資訊網站</h2>
           <ul class="feed-list">
             <li class="feed-item">
-              <p class="content">由於這兩天台北氣溫驟降，時有小雨，許多外縣市的朋友不免格外疲憊，卻無處休息。因此，經過協商，我們特別在台大社會院地下餐廳（位置如圖）設立休息區，並向熱情的朋友們募借了80組左右的睡具。因此，若您有需要，歡迎前來使用，養足您長期抗爭的體力。<b>#反黑箱服貿情報</b></p>
-              <footer>
-                <div class="provider-pic">
-                </div>
-                <div class="provider-detail">
-                  <p class="info"><a href="#">Kevin Chang</a> from <a class="social-twitter" href="#">Twitter</a></p>
-                  <p class="post-time">10 mins ago</p>
-                </div>
-                <a class="icon-small" href="#"><span class="icon-share mls"></span></a>
-              </footer>
+              <a href="http://g0v.today/congressoccupied/http%253A%252F%252Fnewday.tw%252Fintro%252F" target="_black">零時政府</a>
+              <span class="link-desc">太陽花學運即時現場資訊</span>
             </li>
+            <li class="feed-item">
+              <a href="http://ireport.cnn.com/topics/1108725" target="_blank">CNN iReport Protesters occupy Taiwan legislature</a>
+              <span class="link-desc">CNN iReport 太陽花學運社群新聞回報站</span>
+            </li>
+          </ul>
+          <h2>國外文章報導</h2>
+          <ul class="feed-list">
+            <li class="feed-item">
+              <a href="https://medium.com/taiwan-now/ca727991203b" target="_blank">Our democracy must not die</a>
+              <span class="link-desc">from Medium</span>
+            </li>
+            <li class="feed-item">
+              <a href="http://www.bbc.com/news/world-asia-26705779" target="_blank">Taiwan students storm government headquarters</a>
+              <span class="link-desc">from BBC</span>
+            </li>
+          </ul>
           </ul>
         </section>
         <feeds topic="服貿運物資情報" keywords="#服貿,服貿物資,#退回服貿" source="twitter"></feeds>

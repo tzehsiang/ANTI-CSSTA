@@ -181,6 +181,7 @@ a:hover {
 }
 .feed-list {
   background: #FFFFFF;
+  margin-bottom: 14px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -o-border-radius: 5px;
@@ -194,6 +195,11 @@ a:hover {
   position: relative;
   padding: 14px;
   border-bottom: 1px solid #D1D3D4;
+}
+.feed-list > .feed-item > .link-desc {
+  display: block;
+  font-size: 12px;
+  color: rgba(0,0,0,.44);
 }
 .feed-list > .feed-item:last-child {
   border-bottom: none;
