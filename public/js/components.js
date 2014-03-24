@@ -28,7 +28,7 @@ angular.module('components', [])
             updateFeeds($scope, $http);
           };
         }(), 10000);
-
+        
         $scope.encodedTag = function(tag) {
           return encodeURIComponent(tag);
         };
