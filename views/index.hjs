@@ -25,6 +25,26 @@
     <div id="hero-content">
       <div class="showcase">
         <section class="feed" id="sunflower-info">
+          <!-- 太陽花學運公告 -->
+          <h2>太陽花學運公告</h2>
+          <ul class="tag-list">
+            <li>#太陽花學運公告</li>
+            <div class="clear"></div>
+          </ul>
+          <ul class="feed-list">
+            <li class="feed-item alt">
+              <p class="content">如果要送物資進來的 可以送水 麵包 雨衣 餅乾 盡量選購耐久性食材地址: 10051 台北市中正區濟南路一段1號 群賢樓前帳篷收件人: peggy820920 or 黑色島國青年陣線 or 現場工作人員 <b>#反黑箱服貿物資</b></p>
+              <footer>
+                <div class="provider-pic">
+                </div>
+                <div class="provider-detail">
+                  <p class="info"><a href="#">Charles Liou</a> from <a class="social-twitter" href="#">Twitter</a></p>
+                  <p class="post-time">20 mins ago</p>
+                </div>
+                <a class="icon-small" href="#"><span class="icon-retweet mls"></span></a>
+              </footer>
+            </li>
+          </ul>
           <h2>用生命寫下的記錄</h2>
           <a href="https://www.facebook.com/alantwhuang/media_set?set=a.491171137671595.1073741837.100003361394277&type=3" target="_blank" class="feature-story">
             <p class="feature-text">網友在臉書上po出3月24日零時過後，這一夜，大家入睡後的台灣圖輯，請點擊看全文。</p>
@@ -41,7 +61,7 @@
               <span class="link-desc">CNN iReport 太陽花學運社群新聞回報站</span>
             </li>
           </ul>
-          <h2>國外文章報導</h2>
+          <!-- <h2>國外文章報導</h2>
           <ul class="feed-list">
             <li class="feed-item">
               <a href="https://medium.com/taiwan-now/ca727991203b" target="_blank">Our democracy must not die</a>
@@ -51,8 +71,7 @@
               <a href="http://www.bbc.com/news/world-asia-26705779" target="_blank">Taiwan students storm government headquarters</a>
               <span class="link-desc">from BBC</span>
             </li>
-          </ul>
-          </ul>
+          </ul> -->
         </section>
         <feeds topic="太陽花學運情報" keywords="#太陽花學運,#反黑箱服貿,#反服貿黑箱,黑箱,服貿" source="twitter"></feeds>
         <feeds topic="佔領立法院情報" keywords="#佔領立法院, 佔領立法院" source="twitter"></feeds>

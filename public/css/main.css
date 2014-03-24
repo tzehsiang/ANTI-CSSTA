@@ -208,6 +208,20 @@ a:hover {
   padding: 14px;
   border-bottom: 1px solid #D1D3D4;
 }
+.feed-list > .feed-item.alt {
+  background: #FBB040;
+  color: #FFFFFF;
+  border: none;
+}
+.feed-list > .feed-item.alt > .content {
+  font-weight: bold;
+}
+.feed-list > .feed-item.alt > footer > .provider-detail > .info > a {
+  color: rgba(0,0,0,.66);
+}
+.feed-list > .feed-item.alt > footer > .provider-detail > .info > a:hover {
+  color: rgba(0,0,0,.88);
+}
 .feed-list > .feed-item > .link-desc {
   display: block;
   font-size: 12px;
