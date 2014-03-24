@@ -25,6 +25,11 @@
     <div id="hero-content">
       <div class="showcase">
         <section class="feed" id="sunflower-info">
+          <h2>用生命寫下的記錄</h2>
+          <a href="https://www.facebook.com/alantwhuang/media_set?set=a.491171137671595.1073741837.100003361394277&type=3" class="feature-story">
+            <p class="feature-text">網友在臉書上po出3月24日零時過後，這一夜，大家入睡後的台灣圖輯，請點擊看全文。</p>
+            <div class="darklayer"></div>
+          </a>
           <h2>相關資訊網站</h2>
           <ul class="feed-list">
             <li class="feed-item">
@@ -49,8 +54,8 @@
           </ul>
           </ul>
         </section>
-        <feeds topic="服貿運物資情報" keywords="#服貿,服貿物資,#退回服貿" source="twitter"></feeds>
-        <feeds topic="學運推特快速情報" keywords="#太陽花學運,#太陽花,#反黑箱服貿,#反服貿黑箱,#佔領立法院" source="twitter"></feeds>
+        <feeds topic="太陽花學運情報" keywords="#太陽花學運,#反黑箱服貿,#反服貿黑箱,黑箱,服貿" source="twitter"></feeds>
+        <feeds topic="佔領立法院情報" keywords="#佔領立法院, 佔領立法院" source="twitter"></feeds>
         <div class="clear"></div>
       </div>
     </div>
