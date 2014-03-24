@@ -5,6 +5,8 @@ angular.module('components', [])
       $scope.tags = kws;
       if ($scope.source === 'twitter') {
         var query = kws.join(' +exclude:retweets OR ');
+        query = query + " +exclude:retweets";
+        console.log(query);
         $http.get('/twitter_search?q=' + encodeURIComponent(query)).success(function(data) {
           console.log(data);
           if (data.statuses) {

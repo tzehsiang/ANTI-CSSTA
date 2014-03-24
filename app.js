@@ -36,7 +36,7 @@ http.createServer(app).listen(app.get('port'), function() {
   setInterval(function() {
     var q1 = '#太陽花學運 +exclude:retweets OR #反黑箱服貿 +exclude:retweets OR #反服貿黑箱黑箱服貿 +exclude:retweets',
       q2 = '#佔領立法院 +exclude:retweets OR 佔領立法院 +exclude:retweets',
-      q3 = '#太陽花學運公告 #佔領立法院 +exclude:retweets';
+      q3 = '#太陽花學運公告 +exclude:retweets';
     TwitterOauth
       .getSearchResult(encodeURIComponent(q1))
       .then(function(resultObject) {
