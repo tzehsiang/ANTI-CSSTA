@@ -142,6 +142,10 @@ a:hover {
   float: left;
   margin: 0 20px;
 }
+
+.feed-media a {
+  word-wrap: break-word;
+}
 .feed > h2 {
   font-size: 18px;
   color: rgba(0,0,0,.44);

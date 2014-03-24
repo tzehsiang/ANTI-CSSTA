@@ -61,6 +61,7 @@
     </div>
 
     <script src="/components/jquery/dist/jquery.js"></script>
+    <script src="/components/xregexp/min/xregexp-all-min.js"></script>
     <script src="/components/angular/angular.js"></script>
     <script src="/components/angular-route/angular-route.js"></script>
     <script src="/js/components.js"></script>
