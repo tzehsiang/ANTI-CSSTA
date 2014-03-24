@@ -8,7 +8,6 @@ angular.module('components', [])
         query = query + " +exclude:retweets";
         console.log(query);
         $http.get('/twitter_search?q=' + encodeURIComponent(query)).success(function(data) {
-          console.log(data);
           if (data.statuses) {
             $scope.feeds = data.statuses;
           }

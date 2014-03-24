@@ -70,9 +70,9 @@ TwitterOauth.prototype = {
           });
 
           res.on('end', function() {
-            var resultObject = JSON.parse(responseString);
+            //var resultObject = JSON.parse(responseString);
             //console.log(resultObject);
-            deferred.resolve(resultObject);
+            deferred.resolve(responseString);
           });
 
         }).on('error', function(e) {
