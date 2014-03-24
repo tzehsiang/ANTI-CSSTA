@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="atsApp">
+<html ng-app="csstaApp">
   <head>
     <title>{{ title }}</title>
     <meta charset="utf-8">
@@ -51,7 +51,7 @@
     <script src="/components/angular/angular.js"></script>
     <script src="/components/angular-route/angular-route.js"></script>
     <script src="/js/components.js"></script>
-    <script src="/js/atsApp.js"></script>
+    <script src="/js/csstaApp.js"></script>
     <div id="fb-root"></div>
     <script>
       (function(d, s, id){
