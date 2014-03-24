@@ -124,7 +124,9 @@ a:hover {
   
 }
 #hero-logo {
+  display: block;
   background: url(../images/logo_sunflower.png) center top no-repeat;
+  color: rgba(0,0,0,.66);
 }
 #hero-logo > h1 {
   padding-top: 92px;
