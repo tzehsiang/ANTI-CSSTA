@@ -140,6 +140,14 @@ a:hover {
   margin: 0 20px;
 }
 
+.feed-tag {
+  color: rgba(0,0,0,.33);
+}
+
+.feed-tag:hover {
+  color: rgba(0,0,0,.44);
+}
+
 .feed-media a {
   word-wrap: break-word;
 }

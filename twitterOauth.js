@@ -56,7 +56,7 @@ TwitterOauth.prototype = {
       .then(function(bearerToken) {
         https.get({
           host: settings.twitterApiHost,
-          path: '/1.1/search/tweets.json?result_type=recent&include_entities=true&q=' + kw,
+          path: '/1.1/search/tweets.json?count=25&result_type=recent&include_entities=true&q=' + kw,
           headers: {
             'Authorization': 'Bearer ' + bearerToken
           },

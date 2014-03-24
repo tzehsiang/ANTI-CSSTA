@@ -23,11 +23,15 @@ angular.module('components', [])
       },
       controller: function($scope, $element, $http, $interval) {
         updateFeeds($scope, $http);
-        // var update = $interval(function() {
-        //   return function() {
-        //     updateFeeds($scope, $http);
-        //   };
-        // }(), 10000);
+        var update = $interval(function() {
+          return function() {
+            updateFeeds($scope, $http);
+          };
+        }(), 10000);
+
+        $scope.encodedTag = function(tag) {
+          return encodeURIComponent(tag);
+        };
       },
       templateUrl: 'templates/feeds.html',
       replace: true

@@ -16,8 +16,8 @@
         </div>
         <div id="global-function">
           <ul>
-            <li><a class="icon-btn" href="#"><span class="icon-mail mls"></span></a></li>
-            <li><a class="icon-btn" href="#"><span class="icon-search mls"></span></a></li>
+            <li><a href="mailto:sunflowermovement@gmail.com" class="icon-btn" href="#"><span class="icon-mail mls"></span></a></li>
+            <!-- <li><a class="icon-btn" href="#"><span class="icon-search mls"></span></a></li> -->
           </ul>
         </div>
       </div>
