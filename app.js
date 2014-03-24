@@ -38,6 +38,7 @@ app.get('/twitter_search', function(req, res) {
 
 http.createServer(app).listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
+  console.log('Running on ' + app.get('env') + ' mode');
 
   setInterval(function() {
     var q1 = '#太陽花學運 +exclude:retweets OR #反黑箱服貿 +exclude:retweets OR #反服貿黑箱 +exclude:retweets OR 黑箱 +exclude:retweets OR 服貿 +exclude:retweets',
