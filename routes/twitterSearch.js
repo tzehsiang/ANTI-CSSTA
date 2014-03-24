@@ -1,12 +1,7 @@
-var TwitterOauth = require('../twitterOauth');
+var app = require('../app');
 
 exports.search = function(req, res) {
     query = req.query.q;
 
-  //console.log(encodeURIComponent(query));
-  TwitterOauth
-    .getSearchResult(encodeURIComponent(query))
-    .then(function(resultObject){
-      res.json(resultObject);
-    });
+  res.json(app.set(query));
 };
