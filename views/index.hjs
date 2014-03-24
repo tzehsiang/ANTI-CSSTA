@@ -11,12 +11,13 @@
   <body>
     <header id="hero-header">
       <div class="showcase">
-        <div id="hero-logo">
+        <a href="/" id="hero-logo">
           <h1>太陽花學運即時資訊中心</h1>
-        </div>
+        </a>
         <div id="global-function">
           <ul>
             <li><a href="mailto:sunflowermovement@gmail.com" class="icon-btn" href="#"><span class="icon-mail mls"></span></a></li>
+            <li><a href="/#/about" class="icon-btn" href="#"><span class="icon-team mls"></span></a></li>
             <!-- <li><a class="icon-btn" href="#"><span class="icon-search mls"></span></a></li> -->
           </ul>
         </div>

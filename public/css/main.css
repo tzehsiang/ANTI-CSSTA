@@ -73,6 +73,13 @@ a:hover {
   margin: 0 auto;
   padding-left: 40px;
 }
+.text-showcase {
+  width: 700px;
+  margin: 0 auto;
+}
+.text-showcase > p {
+  margin-bottom: 20px;
+}
 .clear {
   clear: both;
 }
@@ -118,7 +125,9 @@ a:hover {
   
 }
 #hero-logo {
+  display: block;
   background: url(../images/logo_sunflower.png) center top no-repeat;
+  color: rgba(0,0,0,.66);
 }
 #hero-logo > h1 {
   padding-top: 92px;
