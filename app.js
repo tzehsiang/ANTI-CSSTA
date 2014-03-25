@@ -45,17 +45,17 @@ http.createServer(app).listen(app.get('port'), function() {
       q2 = '#佔領立法院 +exclude:retweets OR 佔領立法院 +exclude:retweets',
       q3 = '#太陽花學運公告 +exclude:retweets';
     TwitterOauth
-      .getSearchResult(encodeURIComponent(q1))
+      .getSearchResult(encodeURIComponent(q1,'mixed'))
       .then(function(result) {
         feedsCache[q1] = JSON.parse(result);
       });
     TwitterOauth
-      .getSearchResult(encodeURIComponent(q2))
+      .getSearchResult(encodeURIComponent(q2,'mixed'))
       .then(function(result) {
         feedsCache[q2] = JSON.parse(result);
       });
     TwitterOauth
-      .getSearchResult(encodeURIComponent(q3))
+      .getSearchResult(encodeURIComponent(q3,'recent'))
       .then(function(result) {
         feedsCache[q3] = JSON.parse(result);
       });
