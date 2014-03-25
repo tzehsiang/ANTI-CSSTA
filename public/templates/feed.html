@@ -1,7 +1,7 @@
 <li class="feed-item {{getTypeClass()}}">
-  <a class="feed-text" href="https://twitter.com/{{feed.user.screen_name}}/status/{{feed.id_str}}"><p class="content">{{feed.text}}</p><a>
+  <a target="_blank" class="feed-text" href="https://twitter.com/{{feed.user.screen_name}}/status/{{feed.id_str}}"><p class="content">{{feed.text}}</p><a>
+  <a ng-repeat="url in feed.entities.urls" href="{{url.url}}" target="_blank">{{url.url}}</a>
   <div ng-show="feed.entities.media" class="feed-media">
-    <a ng-repeat="url in feed.entities.urls" href="{{url.expanded_url}}">{{url.expanded_url}}</a>
     <div ng-repeat="m in feed.entities.media">
       <img class="feed-img" ng-src="{{m.media_url}}" />
     </div>
@@ -11,7 +11,7 @@
       <img ng-src= "{{feed.user.profile_image_url}}" />
     </div>
     <div class="provider-detail">
-      <p class="info"><a href="https://twitter.com/{{feed.user.screen_name}}">{{feed.user.name}}</a> from <a class="social-twitter" href="#">{{source}}</a></p>
+      <p class="info"><a target="_blank" href="https://twitter.com/{{feed.user.screen_name}}">{{feed.user.name}}</a> from <a target="_blank"class="social-twitter" href="#">{{source}}</a></p>
       <p class="post-time">{{getCreatedTime()}}</p>
     </div>
     <a class="icon-small" href="#"><span class="icon-retweet mls"></span></a>

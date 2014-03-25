@@ -50,13 +50,13 @@ TwitterOauth.prototype = {
 
     return deferred.promise;
   },
-  getSearchResult: function(kw) {
+  getSearchResult: function(kw, type) {
     var deferred = Q.defer();
     this.initPromise
       .then(function(bearerToken) {
         https.get({
           host: settings.twitterApiHost,
-          path: '/1.1/search/tweets.json?count=30&result_type=recent&include_entities=true&q=' + kw,
+          path: '/1.1/search/tweets.json?count=30&result_type=' + type + '&include_entities=true&q=' + kw,
           headers: {
             'Authorization': 'Bearer ' + bearerToken
           },
@@ -66,13 +66,10 @@ TwitterOauth.prototype = {
 
           res.on('data', function(chunk) {
             responseString += chunk;
-            //console.log('Search Response: ' + chunk);
           });
 
           res.on('end', function() {
-            var resultObject = JSON.parse(responseString);
-            //console.log(resultObject);
-            deferred.resolve(resultObject);
+            deferred.resolve(responseString);
           });
 
         }).on('error', function(e) {

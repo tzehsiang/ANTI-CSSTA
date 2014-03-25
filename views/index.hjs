@@ -4,7 +4,10 @@
     <title>太陽花學運即時資訊中心</title>
     <meta charset="utf-8">
     <meta name="description" content="為了支持太陽花學運並且提供最即時與透明化的資訊，反對政府黑箱作業通關服務貿易協定。">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable="no">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:title" content="太陽花學運即時資訊中心" />
+    <meta property="og:description"content="太陽花學運即時資訊中心是分享公告資訊，與提供太陽花學運即時動態的簡易平台．依照我們自己定義的Tag跟關鍵字，我們動態的從Twitter匯入即時資訊．同樣的，使用者也可以在Twitter使用我們定義的Tag，發佈跟學運有關的公告到我們的平台上．參加學運的朋友可以利用這個工具聯絡彼此，關心學運的朋友也可以透過此平台得到網友分享的最新消息。"/>
+    <meta property="og:image" content="/images/logo_sunflower.png" />
     <link rel="stylesheet" href="http://i.icomoon.io/public/temp/056f84463a/Sunflowers/style.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
