@@ -20,7 +20,8 @@ angular.module('components', [])
         keywords: '@',
         source: '@',
         topic: '@',
-        type: '@'
+        type: '@',
+        onLoad: '&onAdd'
       },
       controller: function($scope, $element, $http, $interval) {
         updateFeeds($scope, $http);
@@ -29,18 +30,20 @@ angular.module('components', [])
             updateFeeds($scope, $http);
           };
         }(), 10000);
-        
+
         $scope.encodedTag = function(tag) {
           return encodeURIComponent(tag);
         };
 
         $scope.getTypeClass = function() {
-          if($scope.type === 'announce') {
+          if ($scope.type === 'announce') {
             return 'alt';
           } else {
             return '';
           }
         };
+
+        //$scope.onLoad();
       },
       templateUrl: 'templates/feeds.html',
       replace: true
@@ -55,9 +58,11 @@ angular.module('components', [])
       link: function(scope, element, attrs, feedsCtrl) {
         //remove urls
         scope.feed.text = scope.feed.text.replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/g, '');
-        
-        var re = new XRegExp('#(\\p{L})+', 'g');
-        scope.feed.text = scope.feed.text.replace(re, '');
+
+        if (scope.tags.indexOf('#太陽花學運公告') === -1) {
+          var re = new XRegExp('#(\\p{L})+', 'g');
+          scope.feed.text = scope.feed.text.replace(re, '');
+        }
         // scope.getTextWithHashTags = function() {
         //   //add tags
         //   var re = new XRegExp('#(\\p{L})+', 'g');
