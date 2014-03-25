@@ -3,7 +3,8 @@ var https = require('https'),
   Q = require('q'),
   settings = {
     twitterApiHost: 'api.twitter.com',
-    bearerTokenCredential: 'Y3dKWkJ2Qm9PeGxOOWx5SUZNTENYZzpkdXZsNnI5NW9CZGpxWjgwdEZlMFJCeGNsOGphdGxMOERmZG5CbW9MZ3c='
+    bearerTokenCredential: 'bDZVWXNBaEt2U3FWb0pPdGFJSHc6MDVlcWd3RDFsaUd4SlA4S3ZpbDZDUWNpOVptREx0a3B4TW1DTE1YSUE='
+    //bearerTokenCredential: 'Y3dKWkJ2Qm9PeGxOOWx5SUZNTENYZzpkdXZsNnI5NW9CZGpxWjgwdEZlMFJCeGNsOGphdGxMOERmZG5CbW9MZ3c='
   };
 
 function TwitterOauth(bearerTokenCredential) {
