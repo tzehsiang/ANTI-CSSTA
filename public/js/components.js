@@ -55,6 +55,9 @@ angular.module('components', [])
       link: function(scope, element, attrs, feedsCtrl) {
         //remove urls
         scope.feed.text = scope.feed.text.replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/g, '');
+        
+        var re = new XRegExp('#(\\p{L})+', 'g');
+        scope.feed.text = scope.feed.text.replace(re, '');
         // scope.getTextWithHashTags = function() {
         //   //add tags
         //   var re = new XRegExp('#(\\p{L})+', 'g');
