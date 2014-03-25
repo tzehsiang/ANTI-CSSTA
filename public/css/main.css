@@ -69,12 +69,11 @@ a:hover {
   color: #FBB040;
 }
 .showcase {
-  width: 1110px;
+  max-width: 1110px;
   margin: 0 auto;
-  padding-left: 40px;
 }
 .text-showcase {
-  width: 700px;
+  max-width: 700px;
   margin: 0 auto;
 }
 .text-showcase > p {
@@ -113,9 +112,10 @@ a:hover {
   color: rgba(0,0,0,.44);
 }
 #hero-header {
+  display: block;
   position: relative;
   background: #FFFFFF;
-  padding: 40px 14px;
+  padding: 40px 0px;
   -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.1);
   -moz-box-shadow: 0 1px 0 rgba(0,0,0,.1);
   -o-box-shadow: 0 1px 0 rgba(0,0,0,.1);
@@ -125,9 +125,11 @@ a:hover {
   
 }
 #hero-logo {
+  width: 200px;
   display: block;
   background: url(../images/logo_sunflower.png) center top no-repeat;
   color: rgba(0,0,0,.66);
+  margin: 0 auto;
 }
 #hero-logo > h1 {
   padding-top: 92px;
@@ -145,14 +147,16 @@ a:hover {
   margin-left: 14px;
 }
 #hero-content {
-  margin: 40px 0;
+  margin: 40px 20px;
 }
 .feed {
   width: 330px;
   float: left;
-  margin: 0 40px 0 0;
+  margin: 0 30px 0 0;
 }
-
+.feed#sunflower-info {
+  margin-left: 30px;
+}
 .feed-tag {
   color: rgba(0,0,0,.33);
 }
@@ -329,5 +333,35 @@ a:hover {
   border-radius: 5px;
 }
 
+/* 
+==========================================================================
+Smartphone - portrait
+========================================================================== */
+
+@media only screen
+and (max-width : 320px) {
+
+.icon-btn {
+  width: 32px;
+  height: 32px;
+  font-size: 17px;
+  line-height: 32px;
+}
+#global-function {
+  top: 14px;
+}
+.feed {
+  width: 280px;
+  float: none;
+  margin: 0;
+}
+.feed#sunflower-info {
+  margin-left: 0px;
+}
+.darklayer {
+  width: 280px;
+}
+
+}
 
 
