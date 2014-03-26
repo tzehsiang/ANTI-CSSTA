@@ -41,9 +41,9 @@ http.createServer(app).listen(app.get('port'), function() {
   console.log('Running on ' + app.get('env') + ' mode');
 
   setInterval(function() {
-    var q1 = '#太陽花學運 +exclude:retweets OR #反黑箱服貿 +exclude:retweets OR #反服貿黑箱 +exclude:retweets OR 黑箱 +exclude:retweets OR 服貿 +exclude:retweets',
-      q2 = '#佔領立法院 +exclude:retweets OR 佔領立法院 +exclude:retweets',
-      q3 = '#太陽花學運公告 +exclude:retweets';
+    var q1 = '#太陽花學運 +exclude:retweets -from:waronge OR #反黑箱服貿 +exclude:retweets -from:waronge OR #反服貿黑箱 +exclude:retweets -from:waronge OR 黑箱 +exclude:retweets -from:waronge OR 服貿 +exclude:retweets -from:waronge',
+      q2 = '#佔領立法院 +exclude:retweets -from:waronge OR 佔領立法院 +exclude:retweets -from:waronge',
+      q3 = '#太陽花學運公告 +exclude:retweets -from:waronge';
     TwitterOauth
       .getSearchResult(encodeURIComponent(q1,'mixed'))
       .then(function(result) {
