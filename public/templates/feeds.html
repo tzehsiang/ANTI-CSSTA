@@ -1,4 +1,4 @@
-<section class="feed" on-add="addFeedLoader()">
+<section class="feed" feed-loader="feedLoader">
   <h2>{{topic}}</h2>
   <ul class="tag-list">
     <li ng-repeat="tag in tags"><a class="feed-tag" href="https://twitter.com/search?q={{encodedTag(tag)}}">{{tag}}</a></li>
@@ -6,5 +6,6 @@
   </ul>
   <ul class="feed-list">
     <feed ng-repeat="feed in feeds" feed-data="feed"></feed>
+    <div class="dark-layer"></div>
   </ul>
 </section>

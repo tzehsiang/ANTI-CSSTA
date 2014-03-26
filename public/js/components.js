@@ -2,6 +2,8 @@ angular.module('components', [])
   .directive('feeds', function() {
     var updateFeeds = function($scope, $http) {
       var kws = $scope.keywords.split(',');
+
+      //$scope.feedLoader.load();
       $scope.tags = kws;
       if ($scope.source === 'twitter') {
         var query = kws.join(' +exclude:retweets OR ');
@@ -9,6 +11,7 @@ angular.module('components', [])
         $http.get('/twitter_search?q=' + encodeURIComponent(query)).success(function(data) {
           if (data.statuses) {
             $scope.feeds = data.statuses;
+            //$scope.feedLoader.loaded();
           }
         });
       }
@@ -21,7 +24,7 @@ angular.module('components', [])
         source: '@',
         topic: '@',
         type: '@',
-        onLoad: '&onAdd'
+        feedLoader: '='
       },
       controller: function($scope, $element, $http, $interval) {
         updateFeeds($scope, $http);
@@ -42,8 +45,6 @@ angular.module('components', [])
             return '';
           }
         };
-
-        //$scope.onLoad();
       },
       templateUrl: 'templates/feeds.html',
       replace: true

@@ -1,7 +1,9 @@
 <li class="feed-item {{getTypeClass()}}">
-  <a target="_blank" class="feed-text" href="https://twitter.com/{{feed.user.screen_name}}/status/{{feed.id_str}}"><p class="content">{{feed.text}}</p><a>
+  <a target="_blank" class="feed-text" href="https://twitter.com/{{feed.user.screen_name}}/status/{{feed.id_str}}">
+    <p class="content">{{feed.text}}</p>
+  </a>
   <div ng-repeat="url in feed.entities.urls">
-    <a href="{{url.url}}" target="_blank">{{url.url}}</a>
+    <a class="feed-item-link" href="{{url.url}}" target="_blank">{{url.expanded_url}}</a>
   </div>
   <div ng-show="feed.entities.media" class="feed-media">
     <div ng-repeat="m in feed.entities.media">

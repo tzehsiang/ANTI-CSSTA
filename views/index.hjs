@@ -28,6 +28,7 @@
     </header>
 
     <div id="hero-content" ng-view></div>
+    <div id="page-spinner"></div>
 
     <script src="/components/jquery/dist/jquery.js"></script>
     <script src="/components/xregexp/min/xregexp-all-min.js"></script>

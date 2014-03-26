@@ -68,6 +68,17 @@ a {
 a:hover {
   color: #FBB040;
 }
+#page-spinner {
+  background: url(../images/ajax-loader.gif);
+  top: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  margin: 0 -16px 0 -16px;
+  position: fixed;
+  z-index: 9999;
+  display: none;
+}
 .showcase {
   max-width: 1110px;
   margin: 0 auto;
@@ -174,6 +185,10 @@ a:hover {
   font-weight: bold;
   margin-bottom: 14px;
 }
+.feed-item-link {
+  word-wrap: break-word;
+  word-break: break-all;
+}
 .feed-item:hover {
   background: rgba(0,0,0,.01); 
 }
@@ -216,6 +231,25 @@ a:hover {
   -moz-box-shadow: 0 1px 0 rgba(0,0,0,.1);
   -o-box-shadow: 0 1px 0 rgba(0,0,0,.1);
   box-shadow: 0 1px 0 rgba(0,0,0,.1);
+  position: relative;
+}
+.dark-layer{
+  background-color: white;
+  filter:alpha(opacity=50); /* IE */
+  opacity: 0.5; /* Safari, Opera */
+  -moz-opacity:0.50; /* FireFox */
+  z-index: 20;
+  height: 100%;
+  width: 100%;
+  background-repeat:no-repeat;
+  background-position:center;
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  display: none;
+}
+.feed-list.dim-off .dark-layer {
+  display: block;
 }
 .feed-list > .feed-item {
   position: relative;
