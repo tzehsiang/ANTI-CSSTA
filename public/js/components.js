@@ -60,10 +60,10 @@ angular.module('components', [])
         //remove urls
         scope.feed.text = scope.feed.text.replace(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/g, '');
 
-        if (scope.tags.indexOf('#太陽花學運公告') === -1) {
-          var re = new XRegExp('#(\\p{L})+', 'g');
-          scope.feed.text = scope.feed.text.replace(re, '');
-        }
+        // if (scope.tags.indexOf('#太陽花學運公告') === -1) {
+        //   var re = new XRegExp('[^【]#(\\p{L})+', 'g');
+        //   scope.feed.text = scope.feed.text.replace(re, '');
+        // }
         // scope.getTextWithHashTags = function() {
         //   //add tags
         //   var re = new XRegExp('#(\\p{L})+', 'g');
