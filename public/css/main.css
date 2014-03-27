@@ -304,7 +304,7 @@ a:hover {
 }
 .feed-list > .feed-item.alt {
   background: #FBB040;
-  border: none;
+  border-bottom: 1px solid rgba(255,255,255,.44);
 }
 .feed-list > .feed-item.alt .content {
   font-weight: bold;
