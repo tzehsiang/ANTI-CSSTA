@@ -7,7 +7,7 @@
   </div>
   <div ng-show="feed.entities.media" class="feed-media">
     <div ng-repeat="m in feed.entities.media">
-      <img class="feed-img" ng-src="{{m.media_url}}" />
+      <a href="{{m.media_url}}"><img class="feed-img" ng-src="{{m.media_url}}" /></a>
     </div>
   </div>
   <footer>
