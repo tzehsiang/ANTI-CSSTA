@@ -30,6 +30,14 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+//default, for dev use
+app.set('twitterBearerTokenCredential', 'bVJYWW5tdTBsdDF2RmNsZlVRYndtcTJTeDoyc1NTcGdqR0VNUlVrc1RCRDA0SkNsVG9Mcm5rWG5nS2cwZGJtclNQdVFlck0yRUFmUA==');
+
+// production only
+if ('production' == app.get('env')) {
+  app.set('twitterBearerTokenCredential', 'QmoyeXVwNWFFWkU1eE9POXhmaUFNQjFPNjpJbElFS2pxbVVrYXdzQm9yWkZnQkt4RTZpVEd3WWlaTzVwWnp0c1hTeVBQNmZiM1p4Zg==');
+}
+
 app.get('/', routes.index);
 app.get('/twitter_search', function(req, res) {
   var query = req.query.q;
@@ -38,24 +46,34 @@ app.get('/twitter_search', function(req, res) {
 
 http.createServer(app).listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
-  console.log('Running on ' + app.get('env') + ' mode');
+  console.log('Running in ' + app.get('env') + ' mode');
+
+  app.configure('development', function() {
+    app.use(express.errorHandler({
+      dumpExceptions: true,
+      showStack: true
+    }));
+  });
+
+  var twitterOauth = new TwitterOauth(app.get('twitterBearerTokenCredential'));
 
   setInterval(function() {
     var q1 = '#太陽花學運 +exclude:retweets -from:waronge OR #反黑箱服貿 +exclude:retweets -from:waronge OR #反服貿黑箱 +exclude:retweets -from:waronge OR 黑箱 +exclude:retweets -from:waronge OR 服貿 +exclude:retweets -from:waronge',
       q2 = '#佔領立法院 +exclude:retweets -from:waronge OR 佔領立法院 +exclude:retweets -from:waronge',
       q3 = '#太陽花學運公告 +exclude:retweets -from:waronge';
-    TwitterOauth
-      .getSearchResult(encodeURIComponent(q1,'mixed'))
+
+    twitterOauth
+      .getSearchResult(encodeURIComponent(q1, 'mixed'))
       .then(function(result) {
         feedsCache[q1] = JSON.parse(result);
       });
-    TwitterOauth
-      .getSearchResult(encodeURIComponent(q2,'mixed'))
+    twitterOauth
+      .getSearchResult(encodeURIComponent(q2, 'mixed'))
       .then(function(result) {
         feedsCache[q2] = JSON.parse(result);
       });
-    TwitterOauth
-      .getSearchResult(encodeURIComponent(q3,'recent'))
+    twitterOauth
+      .getSearchResult(encodeURIComponent(q3, 'recent'))
       .then(function(result) {
         feedsCache[q3] = JSON.parse(result);
       });

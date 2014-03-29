@@ -8,17 +8,17 @@ var https = require('https'),
   };
 
 function TwitterOauth(bearerTokenCredential) {
-  this.initPromise = this.init();
+  this.initPromise = this.init(bearerTokenCredential);
 }
 
 TwitterOauth.prototype = {
-  init: function() {
+  init: function(bearerTokenCredential) {
     var deferred = Q.defer(),
       options = {
         host: settings.twitterApiHost,
         path: '/oauth2/token',
         headers: {
-          'Authorization': 'Basic ' + settings.bearerTokenCredential,
+          'Authorization': 'Basic ' + bearerTokenCredential,
           'Content-Type': ' application/x-www-form-urlencoded;charset=UTF-8',
         },
         method: 'POST'
@@ -82,4 +82,4 @@ TwitterOauth.prototype = {
   }
 };
 
-module.exports = new TwitterOauth();
+module.exports = TwitterOauth;
